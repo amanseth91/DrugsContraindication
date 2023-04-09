@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/cds.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<%include header.ejs%>
+<form name="contra" method="get" action="/contra">
+    <div style="overflow: auto">
+        <div align="center" id="1">
+            <select name="s1" id="d1">
+                <option value="" disabled selected hidden>Select Drug 1</option>
+                <% dts.forEach(function (clients) { %>
+                <option> <%= clients.trdnm %><% }) %> </option>
+            </select>
+        </div>
+        <div align="center" >
+            <select name="s2" id="d2">
+                <option value="" disabled selected hidden>Select Drug 2</option>
+                <% dts.forEach(function (clients) { %>
+                <option> <%= clients.trdnm %><% }) %> </option>
+            </select>
+        </div>
+        <input type="submit" />
+        <div align="center">
+            <label for="level">Level: </label><input name="level" id="level" type="text" />
+        </div>
+        <div align="center" id="msglbl">
+            <label for="msg">Message: </label><!--<input style="height:200px;" id="msg" name="msg"/>--><textarea id="msg" name="msg" rows="10" cols="35"></textarea>
+        </div>
+    </div>
+</form>
+<script>
+    var ans1,ans2,cond;
+    function setSelectValue (id, val) {
+        document.getElementById(id).value = val;
+    }
+    function setValue(value) {
+        cond = value;
+    }
+    var drug1 = <%- JSON.stringify(drug1)%>
+        setSelectValue('d1',drug1);
+    var drug2 = <%- JSON.stringify(drug2)%>
+        setSelectValue('d2',drug2);
+    lvl2= <%- JSON.stringify(lvl1)%>
+        document.getElementsByName('level')[0].value = lvl2;
+    msg2 = <%- JSON.stringify(msg1)%>
+        document.getElementsByName('msg')[0].value = msg2;
+
+</script>
+</body>
+</html>

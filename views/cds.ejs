@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/cds.css' />
+</head>
+<body id="index">
+<h1>Welcome to <%= title %></h1>
+<%include header.ejs%>
+<form name="newuser" method="get" action="/getvar">
+    <div class="select" style="overflow: auto">
+        <div align="center">
+            <select name="gn">
+                <option selected="selected">Gender</option>
+                <option >Male</option>
+                <option >Female</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="age">
+                <option selected="selected">Age</option>
+                <option >Child</option>
+                <option >Middleage</option>
+                <option >Senior</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="wht">
+                <option selected="selected">Weight</option>
+                <option >Underweight</option>
+                <option >Healthy</option>
+                <option >Obese</option>
+                <option >Consult</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="pregnt">
+                <option selected="selected">Pregnant</option>
+                <option >yes</option>
+                <option >no</option>
+                <option >Consult</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="smo">
+                <option selected="selected">Smoker</option>
+                <option >yes</option>
+                <option >no</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="alco">
+                <option selected="selected">Alcoholic</option>
+                <option >yes</option>
+                <option >no</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="brstf">
+                <option selected="selected">Breastfeeding</option>
+                <option >yes</option>
+                <option >no</option>
+                <option >Consult</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="sdrug">
+                <option selected="selected">Suggested Drug</option>
+                <option>Atenolol</option>
+                <option>Amoxicillin</option>
+                <option>Mupirocin topical</option>
+                <option>Ibandronate</option>
+                <option>Cetirizine</option>
+                <option>Coumadin</option>
+                <option>Meperidine</option>
+                <option>Venlafaxine</option>
+                <option>Fluticasone nasal</option>
+                <option>Gemcitabine</option>
+                <option>Ziprasidone</option>
+                <option>Meperidine</option>
+                <option>Trastuzumab</option>
+                <option>Eribulin</option>
+                <option>Palbociclib</option>
+                <option>Gefitinib</option>
+                <option>Ruxolitinib</option>
+                <option>Dutasteride and tamsulosin</option>
+                <option>Nitrofurantoin</option>
+                <option>Metoprolol</option>
+                <option>Tizanidine</option>
+                <option>Ezetimibe</option>
+                <option>Sertraline</option>
+                <option>Piperacillin and Tazobactam</option>
+                <option>Ranitidine</option>
+                <option>Hydrochlorothiazide and Bisoprolol</option>
+                <option>Zolpidem</option>
+                <option>Abiraterone</option>
+                <option>Simvastatin</option>
+                <option>Zoledronic acid</option>
+                <option>Emtricitabine</option>
+                <option>Gabapentin</option>
+                <option>Quadrivalent</option>
+                <option>Capsaicin</option>
+                <option>Onabotulinumtoxina</option>
+                <option>Buspirone</option>
+                <option>Buprenorphine</option>
+                <option>Loratadine</option>
+                <option>Paroxetine</option>
+                <option>Reglan</option>
+                <option>Remicade</option>
+                <option>Restoril</option>
+                <option>Risperdal</option>
+                <option>Renvela</option>
+                <option>Risperidone</option>
+                <option>Rituxan</option>
+                <option>Rocephin</option>
+                <option>Relafen</option>
+            </select>
+        </div>
+    </div>
+    <input type="submit"/>
+</form>
+<label for="output">Result: </label><input type="text" name="output" id="output" /><br />
+<label for="cf">Confidence Factor:</label><input type="text" name="cf" id="cf" /><br />
+</body>
+</html>

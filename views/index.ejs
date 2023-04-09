@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/cds.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<%include header.ejs%>
+<form name="contra" method="get" action="/contra">
+  <div align="center">
+    <select name="s1">
+      <option value="" disabled selected hidden>Select Drug 1</option>
+        <% dts.forEach(function (clients) { %>
+      <option> <%= clients.trdnm %><% }) %> </option>
+    </select>
+  </div>
+  <div align="center" >
+    <select name="s2">
+      <option value="" disabled selected hidden>Select Drug 2</option>
+        <% dts.forEach(function (clients) { %>
+      <option> <%= clients.trdnm %><% }) %> </option>
+    </select>
+  </div>
+  <input type="submit" /><br />
+  <div align="center">
+    <label for="level">Level: </label><input name="level" id="level" type="text" />
+  </div>
+  <div align="center" id="msglbl">
+    <label for="msg">Message: </label><!--<input style="height:200px;" id="msg" name="msg"/>--><textarea id="msg" name="msg" rows="10" cols="35"></textarea>
+  </div>
+</form>
+</body>
+</html>

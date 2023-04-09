@@ -1,0 +1,90 @@
+body{
+    text-align: center;
+    background: url("http://i.imgur.com/gfO3fmG.jpg");
+    background-size: cover;
+    margin: 0 auto;
+}
+a {
+    color: white;
+    text-align: justify;
+    font-size: 25px;
+}
+ul{
+    padding: 10px;
+    background: black;
+}
+li{
+    display: inline;
+    padding: 0 10px 0 0;
+}
+
+#submit input{
+    border:0;
+    padding: 10px;
+    font-size: inherit;
+    background: red;
+}
+
+input{
+    border:0;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: inherit;
+}
+
+
+input[type="submit"]{
+    background: red;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+fieldset {
+    border:1px solid black;
+    background-color: white;
+    display: inline;
+    padding: 15px 15px;
+}
+
+legend {
+    padding: 0.2em 0.5em;
+    border:1px solid black;
+    background-color: white;
+    color:black;
+    font-size:80%;
+    text-align:right;
+}
+
+select {
+    border:0;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 18px;
+    background: beige;
+    color: black;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+label{
+    margin-left: -20px;
+}
+
+#msg input{
+    margin-top: 20px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+textarea{
+    margin-top: 10px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+#cf input{
+    margin-top: -50px;
+    margin-left: -1000px;
+
+}

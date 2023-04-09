@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<%include header.ejs%>
+<div id="wrap">
+    <fieldset style="border-radius: 5px;padding: 5px;text-align:left;">
+        <legend>Database Entries</legend>
+        <div id="g" align="left">
+            <form name="new_gnm" method="post" action="/creategnm" >
+                <!--<input type="text" name="gid" placeholder="genericid"><br>-->
+                <input type="text" name="gname" placeholder="genericname"><br>
+                <input name="gnm" type="submit" value="Add Generic Name">
+            </form>
+        </div>
+
+        <div id="t" align="center">
+            <form name="new_tnm" method="post" action="/createtnm">
+                <!--<input type="text" name="tid" placeholder="tid"><br>-->
+                <input type="text" name="tname" placeholder="tname"><br>
+                <input type="text" name="gid" placeholder="gid"><br>
+                <input name="tnm" type="submit" value="Add Trade Name">
+            </form>
+        </div>
+
+        <div id="i" align="right">
+            <form name="new_interactions" method="post" action="/createinteraction">
+                <!--<input type="text" name="srno" placeholder="no."><br>-->
+                <input type="text" name="med1" placeholder="med1"><br>
+                <input type="text" name="med2" placeholder="med2"><br>
+                <input type="text" name="level" placeholder="level"><br>
+                <input type="text" name="msg" placeholder="msg"><br>
+                <input name="interact" type="submit" value="Add Interaction">
+            </form>
+        </div>
+    </fieldset>
+</div>
+</body>
+</html>

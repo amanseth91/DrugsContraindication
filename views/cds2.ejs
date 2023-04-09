@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/cds.css' />
+</head>
+<body name="index">
+<h1>Welcome to <%= title %></h1>
+<%include header.ejs%>
+<form name="newuser" method="get" action="/getvar">
+    <div class="select" style="overflow: auto">
+        <div align="center">
+            <select name="gn" id="gen">
+                <option value="" disabled selected hidden>Gender</option>
+                <option >Male</option>
+                <option >Female</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="age" id="ag">
+                <option value="" disabled selected hidden>Age</option>
+                <option >Child</option>
+                <option >Middleage</option>
+                <option >Senior</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="wht" id="wt">
+                <option value="" disabled selected hidden>Weight</option>
+                <option >Underweight</option>
+                <option >Healthy</option>
+                <option >Obese</option>
+                <option >Consult</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="pregnt" id="prg">
+                <option value="" disabled selected hidden>Pregnant</option>
+                <option >yes</option>
+                <option >no</option>
+                <option >Consult</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="smo" id="sm">
+                <option value="" disabled selected hidden>Smoker</option>
+                <option >yes</option>
+                <option >no</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="alco" id="alc">
+                <option value="" disabled selected hidden>Alcoholic</option>
+                <option >yes</option>
+                <option >no</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="brstf" id="bf">
+                <option value="" disabled selected hidden>Breastfeeding</option>
+                <option >yes</option>
+                <option >no</option>
+                <option >Consult</option>
+            </select>
+        </div>
+        <div align="center">
+            <select name="sdrug" id="dg">
+                <option value="" disabled selected hidden>Suggested Drug</option>
+                <option>Atenolol</option>
+                <option>Amoxicillin</option>
+                <option>Mupirocin topical</option>
+                <option>Ibandronate</option>
+                <option>Cetirizine</option>
+                <option>Coumadin</option>
+                <option>Meperidine</option>
+                <option>Venlafaxine</option>
+                <option>Fluticasone nasal</option>
+                <option>Gemcitabine</option>
+                <option>Ziprasidone</option>
+                <option>Meperidine</option>
+                <option>Trastuzumab</option>
+                <option>Eribulin</option>
+                <option>Palbociclib</option>
+                <option>Gefitinib</option>
+                <option>Ruxolitinib</option>
+                <option>Dutasteride and tamsulosin</option>
+                <option>Nitrofurantoin</option>
+                <option>Metoprolol</option>
+                <option>Tizanidine</option>
+                <option>Ezetimibe</option>
+                <option>Sertraline</option>
+                <option>Piperacillin and Tazobactam</option>
+                <option>Ranitidine</option>
+                <option>Hydrochlorothiazide and Bisoprolol</option>
+                <option>Zolpidem</option>
+                <option>Abiraterone</option>
+                <option>Simvastatin</option>
+                <option>Zoledronic acid</option>
+                <option>Emtricitabine</option>
+                <option>Gabapentin</option>
+                <option>Quadrivalent</option>
+                <option>Capsaicin</option>
+                <option>Onabotulinumtoxina</option>
+                <option>Buspirone</option>
+                <option>Buprenorphine</option>
+                <option>Loratadine</option>
+                <option>Paroxetine</option>
+                <option>Reglan</option>
+                <option>Remicade</option>
+                <option>Restoril</option>
+                <option>Risperdal</option>
+                <option>Renvela</option>
+                <option>Risperidone</option>
+                <option>Rituxan</option>
+                <option>Rocephin</option>
+                <option>Relafen</option>
+            </select>
+        </div>
+    </div>
+    <input type="submit"/>
+</form>
+<label for="output">Result: </label><input type="text" name="output" id="output" class="output"/><br />
+<label for="cf">Confidence Factor:</label><input type="text" name="cf" id="cf" /><br />
+<script>
+    function setSelectValue (id, val) {
+        document.getElementById(id).value = val;
+    }
+
+    var gen = <%- JSON.stringify(gen)%>
+        setSelectValue('gen',gen);
+    var ag = <%- JSON.stringify(ag)%>
+        setSelectValue('ag',ag);
+    var wt = <%- JSON.stringify(wt)%>
+        setSelectValue('wt',wt);
+    var prg = <%- JSON.stringify(prg)%>
+        setSelectValue('prg',prg);
+    var sm = <%- JSON.stringify(sm)%>
+        setSelectValue('sm',sm);
+    var alc = <%- JSON.stringify(alc)%>
+        setSelectValue('alc',alc);
+    var bf = <%- JSON.stringify(bf)%>
+        setSelectValue('bf',bf);
+    var dg = <%- JSON.stringify(dg)%>
+        setSelectValue('dg',dg);
+    var ans = <%- JSON.stringify(ans)%>
+        document.getElementsByName('output')[0].value = ans;
+    var cf = <%- JSON.stringify(cf)%>
+        document.getElementsByName('cf')[0].value = cf</script>
+</body>
+</html>

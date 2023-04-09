@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/cds.css' />
+</head>
+<body id="index">
+<h1>Welcome to <%= title %></h1>
+<%include header.ejs%>
+<form name="newuser" method="get" action="/cdss2">
+    <div class="select" style="overflow: auto">
+        <div align="center">
+            <select id="gen" name="gn">
+                <option selected="selected">Gender</option>
+                <option>male</option>
+                <option>female</option>
+            </select>
+        </div>
+        <div align="center">
+            <label for="age">  Age: </label>
+            <input id="ag" type="text" name="age"/>
+        </div>
+        <div align="center">
+            <label for="weight">Weight: </label>
+            <input type="text" id="wt" name="weight"/>
+        </div>
+        <div align="center">
+            <label for="height">Height: </label>
+            <input id="height" type="text" name="height"/>
+        </div>
+        <div align="center">
+            <select id="prg" name="pregnt">
+                <option selected="selected">Pregnant</option>
+                <option>yes</option>
+                <option>no</option>
+            </select>
+        </div>
+        <div align="center">
+            <select id="bf" name="brstf">
+                <option selected="selected">Breastfeeding</option>
+                <option>yes</option>
+                <option>no</option>
+            </select>
+        </div>
+        <div align="center">
+            <label for="allr">Allergy/Condition: </label>
+            <input id="allr" type="text" name="allr"/>
+        </div>
+        <!--<div align="center">
+            <select id="dg" name="sdrug">
+                <option selected="selected">Drug Selection</option>
+                <option >d1</option>
+                <option >d2</option>
+                <option >d3</option>
+                <option >d4</option>
+                <option >d5</option>
+                <option >d6</option>
+                <option >d7</option>
+            </select>
+        </div>-->
+        <div align="center">
+            <select id="dg" name="sdrug">
+                <option selected="selected">Drug Selection</option>
+                <!--<option>amilton</option>
+                <option>acticod</option>
+                <option>bronolax</option>
+                <option>arodyl</option>
+                <option>abidol</option>
+                <option>acema</option>
+                <option>acmedol</option>
+                <option>adamon</option>
+                <option>amphen</option>
+                <option>beclo</option>
+                <option>meftal-mr</option>
+                <option>minipar-tz</option>
+                <option>ned-mr</option>
+                <option>nelsid-mr</option>
+                <option>Complera</option>
+                <option>odefsey</option>-->
+                <% tr.forEach(function (clients) { %>
+                <option> <%= clients %><% }) %> </option>
+            </select>
+        </div>
+    </div>
+    <input type="submit"/>
+</form>
+<label for="output">Result: </label><textarea name="output" id="output" ></textarea><br />
+<label for="output2">Confidence Factor: </label><input name="output2" id="output2" ></input><br />
+<script>
+    function setSelectValue (id, val) {
+        document.getElementById(id).value = val;
+    }
+
+    var gen = <%- JSON.stringify(gen)%>
+        setSelectValue('gen',gen);
+    var ag = <%- JSON.stringify(ag)%>
+        setSelectValue('ag',ag);
+    var wt = <%- JSON.stringify(wt)%>
+        setSelectValue('wt',wt);
+    var ht = <%- JSON.stringify(ht)%>
+        setSelectValue('height',ht);
+    var prg = <%- JSON.stringify(prg)%>
+        setSelectValue('prg',prg);
+    var bf = <%- JSON.stringify(bf)%>
+        setSelectValue('bf',bf);
+    var dg = <%- JSON.stringify(dg)%>
+        setSelectValue('dg',dg);
+    var allr = <%- JSON.stringify(allr)%>
+        setSelectValue('allr',allr);
+    var ans = <%- JSON.stringify(ans)%>
+        document.getElementsByName('output')[0].value = ans;
+    var cf = <%- JSON.stringify(cf)%>
+        document.getElementsByName('output2')[0].value = cf;
+</script>
+</body>
+</html>

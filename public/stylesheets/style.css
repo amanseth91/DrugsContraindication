@@ -1,0 +1,73 @@
+body{
+  text-align: center;
+  background: url("http://i.imgur.com/gfO3fmG.jpg");
+  background-size: cover;
+  margin: 0 auto;
+}
+a {
+  color: white;
+  text-align: justify;
+  font-size: 25px;
+}
+ul{
+  padding: 10px;
+  background: black;
+}
+li{
+  display: inline;
+  padding: 0 10px 0 0;
+}
+
+
+form{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#wrap fieldset{
+  margin: 20px;
+  border:1px solid black;
+}
+
+#g form{
+  margin-top: 90px;
+  margin-left: 100px;
+}
+
+#t form{
+  margin-left: -50px;
+  margin-top: -155px;
+}
+
+#i form{
+  margin-right: 150px;
+  margin-top: -190px;
+}
+
+#g input[type="submit"]{
+  margin-left: 30px;
+}
+
+#i input[type="submit"]{
+  margin-right: 40px;
+}
+
+input{
+  border:0;
+  padding: 10px;
+  font-size: inherit;
+  margin-bottom: 10px;
+}
+
+input[type="submit"]{
+  background: red;
+  color: white;
+  margin-top: 10px;
+}
+
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid black;
+  color:black;
+  font-size:100%;
+}

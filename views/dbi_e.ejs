@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style2.css' />
+</head>
+<body>
+
+<%include header.ejs%>
+<div id="wrapper">
+    <div class="page-header"><h2><%=page_title%></h2></div>
+    <div class="page-container">
+        <div class="page-data">
+            <div class="data-table">
+                <table border="1" cellpadding="7" cellspacing="7">
+                    <tr>
+                        <th >No.</th>
+                        <th >G_Name 1</th>
+                        <th >G_Name 2</th>
+                        <th >Level</th>
+                        <th >Message</th>
+                        <th width="120px">Action</th>
+                    </tr>
+
+                    <% if(data.length){
+
+                    for(var i = 0;i < data.length;i++) { %>
+
+                    <tr>
+                        <td><%=data[i].srno%></td>
+                        <td><%=data[i].med1%></td>
+                        <td><%=data[i].med2%></td>
+                        <td><%=data[i].level%></td>
+                        <td><%=data[i].msg%></td>
+                        <td><a class="a-inside delete" href="/deletei/<%=data[i].srno%>">Delete</a></td>
+                    </tr>
+                    <% }
+                    }else{ %>
+                    <tr>
+                        <td colspan="3">No user</td>
+                    </tr>
+                    <% } %>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+
+
